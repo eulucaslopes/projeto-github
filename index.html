@@ -1,11 +1,287 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WorkShop GitHub</title>
+    <meta
+      name="description"
+      content="Aprenda os principais conceitos do GitHub de forma visual, prática e direta."
+    />
+    <title>GitHub em fluxo | Guia essencial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h2>Workshop - GitHub COTI Informática</h2>
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="GitHub em fluxo, início">
+        <span class="brand-mark">&lt;/&gt;</span>
+        <span>github<span class="brand-dot">.</span>em fluxo</span>
+      </a>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="main-nav"
+      >
+        Menu
+      </button>
+      <nav id="main-nav" class="main-nav" aria-label="Navegação principal">
+        <a href="#conceitos">Conceitos</a>
+        <a href="#fluxo">Fluxo de trabalho</a>
+        <a href="#duvidas">Dúvidas</a>
+        <a
+          class="nav-cta"
+          href="https://github.com"
+          target="_blank"
+          rel="noreferrer"
+          >Abrir GitHub <span aria-hidden="true">↗</span></a
+        >
+      </nav>
+    </header>
+
+    <main id="inicio">
+      <section class="hero section-shell">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="eyebrow-line"></span> Guia rápido para criar junto
+          </p>
+          <h1>Seu código.<br /><em>Seu próximo passo.</em></h1>
+          <p class="hero-text">
+            GitHub é onde ideias ganham histórico, colaboração e espaço para
+            evoluir. Entenda a linguagem por trás de cada projeto.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#conceitos"
+              >Explorar conceitos <span aria-hidden="true">↓</span></a
+            >
+            <a class="text-link" href="#fluxo"
+              >Ver o fluxo <span aria-hidden="true">→</span></a
+            >
+          </div>
+        </div>
+        <div
+          class="hero-visual"
+          aria-label="Ilustração de um projeto GitHub em atividade"
+        >
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="terminal-window">
+            <div class="terminal-bar">
+              <span></span><span></span><span></span
+              ><code>projeto-github / main</code>
+            </div>
+            <div class="terminal-body">
+              <p>
+                <span class="terminal-muted">01</span>
+                <span class="terminal-pink">const</span>
+                <span class="terminal-yellow">ideia</span> =
+                <span class="terminal-green">"em movimento"</span>;
+              </p>
+              <p>
+                <span class="terminal-muted">02</span>
+                <span class="terminal-pink">git</span> add
+                <span class="terminal-blue">.</span>
+              </p>
+              <p>
+                <span class="terminal-muted">03</span>
+                <span class="terminal-pink">git</span> commit -m
+                <span class="terminal-green">"primeiro passo"</span>
+              </p>
+              <p>
+                <span class="terminal-muted">04</span>
+                <span class="terminal-pink">git</span> push origin
+                <span class="terminal-blue">main</span>
+              </p>
+              <p class="terminal-result">
+                <span>✓</span> publicado com sucesso
+              </p>
+            </div>
+          </div>
+          <div class="floating-note note-branch">
+            <span>⑂</span><strong>branch</strong><small>nova ideia</small>
+          </div>
+          <div class="floating-note note-check">
+            <span>✓</span><strong>pull request</strong
+            ><small>pronto para revisar</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="concepts section-shell" id="conceitos">
+        <div class="section-heading">
+          <p class="eyebrow">01 / A base</p>
+          <h2>O vocabulário que<br /><span>destrava projetos.</span></h2>
+        </div>
+        <p class="section-intro">
+          Seis conceitos simples formam a base para navegar por qualquer
+          repositório e trabalhar em equipe com confiança.
+        </p>
+        <div class="concept-grid">
+          <article class="concept-card card-green">
+            <span class="card-number">01</span>
+            <div class="concept-icon">▣</div>
+            <h3>Repositório</h3>
+            <p>
+              O espaço que guarda o código, os arquivos e todo o histórico de um
+              projeto.
+            </p>
+            <a href="#duvidas">Entender melhor <span>↗</span></a>
+          </article>
+          <article class="concept-card card-blue">
+            <span class="card-number">02</span>
+            <div class="concept-icon">◒</div>
+            <h3>Commit</h3>
+            <p>
+              Um registro pontual das mudanças. Pense nele como uma fotografia
+              do seu trabalho.
+            </p>
+            <a href="#duvidas">Entender melhor <span>↗</span></a>
+          </article>
+          <article class="concept-card card-pink">
+            <span class="card-number">03</span>
+            <div class="concept-icon">⑂</div>
+            <h3>Branch</h3>
+            <p>
+              Uma linha paralela de desenvolvimento para testar ideias sem
+              afetar a versão principal.
+            </p>
+            <a href="#duvidas">Entender melhor <span>↗</span></a>
+          </article>
+          <article class="concept-card card-yellow">
+            <span class="card-number">04</span>
+            <div class="concept-icon">⇄</div>
+            <h3>Pull request</h3>
+            <p>
+              O convite para revisar, conversar e incorporar suas mudanças ao
+              projeto.
+            </p>
+            <a href="#duvidas">Entender melhor <span>↗</span></a>
+          </article>
+          <article class="concept-card card-purple">
+            <span class="card-number">05</span>
+            <div class="concept-icon">◉</div>
+            <h3>Issue</h3>
+            <p>
+              Um espaço para registrar tarefas, bugs, perguntas e ideias que
+              merecem atenção.
+            </p>
+            <a href="#duvidas">Entender melhor <span>↗</span></a>
+          </article>
+          <article class="concept-card card-orange">
+            <span class="card-number">06</span>
+            <div class="concept-icon">✦</div>
+            <h3>Fork</h3>
+            <p>
+              Uma cópia de um projeto para experimentar, adaptar ou começar uma
+              nova direção.
+            </p>
+            <a href="#duvidas">Entender melhor <span>↗</span></a>
+          </article>
+        </div>
+      </section>
+
+      <section class="workflow" id="fluxo">
+        <div class="section-shell workflow-inner">
+          <div class="workflow-copy">
+            <p class="eyebrow eyebrow-light">02 / Na prática</p>
+            <h2>Da ideia ao<br /><em>código compartilhado.</em></h2>
+            <p>
+              O GitHub organiza o caminho para que você possa criar com calma,
+              revisar com clareza e publicar com segurança.
+            </p>
+            <a
+              class="button button-light"
+              href="https://docs.github.com/pt"
+              target="_blank"
+              rel="noreferrer"
+              >Acessar documentação <span>↗</span></a
+            >
+          </div>
+          <div class="steps" aria-label="Etapas do fluxo de trabalho">
+            <div class="step">
+              <span>01</span>
+              <div>
+                <h3>Crie uma branch</h3>
+                <p>Separe sua nova funcionalidade.</p>
+              </div>
+            </div>
+            <div class="step">
+              <span>02</span>
+              <div>
+                <h3>Faça commits</h3>
+                <p>Registre seu progresso.</p>
+              </div>
+            </div>
+            <div class="step">
+              <span>03</span>
+              <div>
+                <h3>Abra um pull request</h3>
+                <p>Peça feedback ao time.</p>
+              </div>
+            </div>
+            <div class="step">
+              <span>04</span>
+              <div>
+                <h3>Faça o merge</h3>
+                <p>Junte o melhor ao projeto.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq section-shell" id="duvidas">
+        <div class="section-heading">
+          <p class="eyebrow">03 / Sem mistério</p>
+          <h2>Perguntas que aparecem<br /><span>no primeiro projeto.</span></h2>
+        </div>
+        <div class="faq-list">
+          <details open>
+            <summary>Git e GitHub são a mesma coisa?<span>+</span></summary>
+            <p>
+              Não. Git é o sistema de controle de versão que roda no seu
+              computador. GitHub é a plataforma online que hospeda repositórios
+              Git e facilita a colaboração.
+            </p>
+          </details>
+          <details>
+            <summary>
+              Preciso saber programar para usar o GitHub?<span>+</span>
+            </summary>
+            <p>
+              Não. Você pode explorar projetos, abrir issues, colaborar com
+              documentação e aprender no seu ritmo. Programar é apenas uma das
+              possibilidades.
+            </p>
+          </details>
+          <details>
+            <summary>O que significa fazer merge?<span>+</span></summary>
+            <p>
+              É incorporar as alterações de uma branch em outra, normalmente
+              levando uma funcionalidade revisada para a branch principal.
+            </p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell footer-inner">
+        <a class="brand" href="#inicio"
+          ><span class="brand-mark">&lt;/&gt;</span
+          ><span>github<span class="brand-dot">.</span>em fluxo</span></a
+        >
+        <p>Aprender junto muda o código.</p>
+        <span class="footer-meta"
+          >Workshop COTI Informática · <span id="current-year"></span
+        ></span>
+      </div>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
